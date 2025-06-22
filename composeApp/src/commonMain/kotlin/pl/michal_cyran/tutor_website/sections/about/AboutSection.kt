@@ -24,7 +24,6 @@ import pl.michal_cyran.tutor_website.core.SectionHeading
 import tutorwebsite.composeapp.generated.resources.Res
 import tutorwebsite.composeapp.generated.resources._2
 import tutorwebsite.composeapp.generated.resources.j_weisner_eq2dAPn1qio_unsplash
-import tutorwebsite.composeapp.generated.resources.nick_hillier_yD5rv8_WzxA_unsplash
 import tutorwebsite.composeapp.generated.resources.thomas_t_OPpCbAAKWv8_unsplash
 
 @Composable

@@ -94,7 +94,7 @@ fun LessonsSection(
                 PropertyCard(
                     painter = painterResource(Res.drawable.schedule),
                     title = "Elastyczny grafik",
-                    description = "Mój grafik jest dostępny dla wszystkich na Discordzie i aktualizowany cały czas. Możesz więc umawiać się na zajęcia w dogodnych dla Ciebie terminach.",
+                    description = "Mój grafik jest dostępny dla wszystkich na Discordzie i aktualizowany na bieżąco. Możesz więc umawiać się na zajęcia w dogodnych dla Ciebie terminach.",
                 )
                 PropertyCard(
                     painter = painterResource(Res.drawable.person),

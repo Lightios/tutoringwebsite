@@ -115,7 +115,7 @@ fun OfferSection(
                 OfferCard(
                     painter = painterResource(Res.drawable.assignment),
                     title = "Egzamin zawodowy",
-                    description = "Pomoc w przygotowaniu do egzaminu z poziomu kwalifikacji E.13 i E.14 / EE.08 i EE.09 / INF.03 i INF.04.",
+                    description = "Pomoc w przygotowaniu do egzaminu z poziomu kwalifikacji E.13 i E.14 / EE.09 / INF.03 i INF.04.",
                 )
             }
         }
