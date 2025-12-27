@@ -1,35 +1,32 @@
-rootProject.name = "TutorWebsite"
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
 pluginManagement {
     repositories {
-        google {
-            mavenContent {
-                includeGroupAndSubgroups("androidx")
-                includeGroupAndSubgroups("com.android")
-                includeGroupAndSubgroups("com.google")
-            }
-        }
-        mavenCentral()
         gradlePluginPortal()
     }
 }
 
 dependencyResolutionManagement {
     repositories {
-        google {
-            mavenContent {
-                includeGroupAndSubgroups("androidx")
-                includeGroupAndSubgroups("com.android")
-                includeGroupAndSubgroups("com.google")
-            }
-        }
         mavenCentral()
+        google()
     }
 }
 
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.10.0"
+// The following block registers dependencies to enable Kobweb snapshot support. It is safe to delete or comment out
+// this block if you never plan to use them.
+gradle.settingsEvaluated {
+    fun RepositoryHandler.kobwebSnapshots() {
+        maven("https://central.sonatype.com/repository/maven-snapshots/") {
+            mavenContent {
+                includeGroupByRegex("com\\.varabyte\\.kobweb.*")
+                snapshotsOnly()
+            }
+        }
+    }
+
+    pluginManagement.repositories { kobwebSnapshots() }
+    dependencyResolutionManagement.repositories { kobwebSnapshots() }
 }
 
-include(":composeApp")
+rootProject.name = "tutor_website"
+
+include(":site")

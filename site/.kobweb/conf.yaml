@@ -1,0 +1,14 @@
+site:
+  title: "TutorWebsiteKobweb"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/tutor_website.js"
+      api: "build/libs/tutor_website.jar"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/tutor_website.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
