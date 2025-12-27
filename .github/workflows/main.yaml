@@ -1,5 +1,3 @@
-# export-and-deploy-site.yml
-
 name: Deploy Kobweb site to Pages
 
 on:
@@ -28,7 +26,7 @@ jobs:
         shell: bash
 
     env:
-      KOBWEB_CLI_VERSION: 0.9.21
+      KOBWEB_CLI_VERSION: 0.9.16
 
     steps:
       - name: Checkout
@@ -42,6 +40,11 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        # Uncomment below if you want build scans for your Gradle tasks
+        # with:
+        #  build-scan-publish: true
+        #  build-scan-terms-of-use-url: "https://gradle.com/help/legal-terms-of-use"
+        #  build-scan-terms-of-use-agree: "yes"
 
       - name: Query Browser Cache ID
         id: browser-cache-id
